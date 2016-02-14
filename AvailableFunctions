@@ -1,0 +1,109 @@
+--std--
+KeyPressNoHook(key)
+StuckException
+log(*args, **kwargs)
+stuckwhile(val, check, stuck=None, end=None, ex=<class 'std.StuckException'>)
+TimeoutException
+WaitUntilStop()
+AddOnStop(func)
+timeoutwhile(val, check, timeout=None, end=None, ex=<class 'std.TimeoutException'>)
+OnStop()
+--server--
+GetWorld()
+GetChannel()
+--move--
+SetMove(x, y)
+UnHookMove()
+Face(x, y=0, end=True)
+MoveX(x, stuck=None, end=True, y=0, wall=True)
+FaceTowards(x, y=0, end=True)
+HookMove()
+FaceRight(y=0, end=True)
+SetRopeYOff(off=0)
+RopeY(y, stuck=None, end=True, x=0)
+SetMoveXOff(off=5)
+FaceLeft(y=0, end=True)
+--spawnpoint--
+HookSP()
+SetSP(x, y)
+UnHookSP()
+--char--
+GetInGame()
+GetCharBreath()
+GetCharX()
+GetCharY()
+GetPeopleCount()
+GetCharPos()
+SetCharBounds(bounds)
+KamiTele(x, y)
+WaitForBreath(timeout=None)
+--map_info--
+GetMapID()
+--autoportal--
+DisableAutoPortal()
+EnableAutoPortal()
+--blockrecv--
+EndRecv()
+RemoveRecvBlock(opcode)
+AddRecvBlock(opcode)
+WaitForRecv(opcode, timeout=None, onwaiting=None)
+--key--
+KeyPress(vk)
+KeyUp(vk)
+EndKey()
+KeySpam(vk)
+KeyDown(vk)
+--mob--
+GetClosestMob(mobs=None, pt=None)
+GetMobsOnPlatform(plat=None, mobs=None, dist=(60, 60))
+GetMobs()
+--portal--
+GetPortals()
+GetRealPortalCount()
+--map--
+GetUpRopes(ropes=None, dist=(10, 75), plat=None, plats=None, pt=None)
+GetRopes()
+GetDownRopes(ropes=None, dist=(75, 10), plat=None, plats=None, pt=None)
+GetWalls()
+GetRope(ropes=None, pt=None)
+--foothold--
+YAtX(fh, x)
+GetFootholds()
+GetPlatform(plats=None, pt=None, dist=(3, 3))
+GetWalkablePlatforms(plats=None, mplat=None, dist=(75, 75))
+GetPlatforms(fhs=None)
+GetFoothold(plats=None, pt=None, dist=(3, 3))
+--inventory--
+GetInventory()
+GetMesos()
+--level--
+GetCharLevel()
+--stats--
+GetCharHP()
+GetCharMP()
+GetCharEXP()
+--portaltele--
+PortalTele(x, y)
+EndPortalTele()
+--sendpacket--
+Packet
+ | hex(self, hexstr)
+ | pack(self, fmt, *values)
+ | rand(self, n)
+ | send(self)
+ | str(self, s)
+--itemhook--
+FetchItem(timeout=2)
+EndItem()
+--itemfilter--
+HookFilter()
+SetFilter(items)
+UnHookFilter()
+SetFilterMode(whitelist=True)
+SetFilterMesos(mesos)
+--item--
+GetItems()
+GetItemCount()
+--autologin--
+SetAutoLogin(usern, passw, world, channel, char, pic, channeldelay=80, picdelay=80, logindelay=80)
+EndAutoLogin()
